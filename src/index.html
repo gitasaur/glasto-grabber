@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+          <div class="col-sm-12">
+              <h1>Glasto Grabber 🙌</h1>
+              <h4><i>Mildly</i> improve your chances to get Glastonbury tickets</h4>
+              <p>⚠️ Warning: This is demo software and is not guaranteed to work. Use a normal browser as well as this app.</p>
+              <p>
+                Because opening multiple tabs is bad 🙅 this app works by opening up multiple unique browsers.<br>
+                It tricks <s>you</s> the Glastonbury website into thinking you have lots of friends.
+              </p>
+              
+              <h4>Instructions</h4>
+              <ol>
+                  <li>Enter how many browsers you'd like to open (too many will make your computer slow, about 5-10 is good)</li>
+                  <li>Click "open"</li>
+                  <li>Drag/resize each browser window so you can see it</li>
+                  <li>Once browsers are open, grab this window (Electron) and hit the refresh button until you are in the Glastonbury ticket wait screen</li>
+                  <li>If you get through to the buy page, use that browser window to complete your purchase</li>
+                  <li>Good luck 🙏</li>
+              </ol> 
+
+              <form class="form-inline" id="noOfBrowsersForm">
+                <div class="form-group">
+                    I want 
+                    <input type="number" class="form-control mb-2 mr-sm-2" id="noOfBrowsers"> 
+                    browsers 
+                    <button type="button" class="btn btn-primary" onclick="servePages()">Open</button>
+                </div>
+              </form>
+
+              <button id="refreshButton" type="button" class="btn btn-primary" onclick="refreshPages()">
+                Refresh all pages
+              </button>
+          </div>
+      </div>
+      <div style="position: absolute; bottom: 30px;">
+        Made by <a style="cursor: pointer;" onclick="openLink('https://twitter.com/nzmilky')">@nzmilky</a> 🦖
+      </div>
+    </div>
+  </body>
+
+  <script src="script.js"></script>
+</html>
