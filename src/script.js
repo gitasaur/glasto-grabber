@@ -8,8 +8,6 @@ let pages = [];
 function servePages () {
     let urlToGoTo = document.getElementById("urlToGoTo").value;
     let browsersNumber = document.getElementById("noOfBrowsers").value;
-
-    console.log(urlToGoTo);
     
     if (+browsersNumber) {
         for(let i=0; i < +browsersNumber; i++) {
