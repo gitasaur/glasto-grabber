@@ -9,7 +9,14 @@
 
 <!-- Optional theme -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-  </head>
+
+<style>
+  .long-text-input {
+    width: 250px !important;
+  }
+</style>
+
+</head>
   <body>
     <div class="container">
       <div class="row">
@@ -35,9 +42,11 @@
               <form class="form-inline" id="noOfBrowsersForm">
                 <div class="form-group">
                     I want 
-                    <input type="number" class="form-control mb-2 mr-sm-2" id="noOfBrowsers"> 
+                    <input type="number" value="5" class="form-control mb-2 mr-sm-2" id="noOfBrowsers"> 
                     browsers 
-                    <button type="button" class="btn btn-primary" onclick="servePages()">Open</button>
+                    <button type="button" class="btn btn-primary" onclick="servePages()">Open</button> 
+                    at 
+                    <input type="text" value="https://glastonbury.seetickets.com/" class="form-control long-text-input" id="urlToGoTo">
                 </div>
               </form>
 

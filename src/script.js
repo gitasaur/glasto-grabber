@@ -6,7 +6,10 @@ const GLASTO_URL = 'https://glastonbury.seetickets.com/';
 let pages = [];
 
 function servePages () {
+    let urlToGoTo = document.getElementById("urlToGoTo").value;
     let browsersNumber = document.getElementById("noOfBrowsers").value;
+
+    console.log(urlToGoTo);
     
     if (+browsersNumber) {
         for(let i=0; i < +browsersNumber; i++) {
@@ -17,7 +20,7 @@ function servePages () {
                     });
         
                 const page = await browser.newPage();
-                await page.goto(GLASTO_URL);
+                await page.goto(urlToGoTo || GLASTO_URL);
                 pages.push(page);
             })();
         }
